@@ -1,16 +1,13 @@
 <% content_for :page_title do %>
-  <%= (t('.contents') + " for '#{@page.title}' Page").html_safe %>
+  <%= t(:listing_pages) %>
 <% end %>
 
 <% content_for :page_actions do %>
-  <div class="toolbar" data-hook="toolbar">
-    <ul class="actions header-action-links inline-menu">
-      <li id="new_product_link">
-        <%= button_link_to t('.new_content'), new_object_url, :icon => 'icon-plus' %>
-      </li>
-    </ul>
-  </div>
+  <li id="new_post_link">
+    <%= button_link_to t(:new_page), new_object_url, { :icon => "icon-plus"} %>
+  </li>
 <% end %>
+
 
 <% if false %>
   <% content_for :table_filter_title do %>
